@@ -29,12 +29,18 @@
           z.style.display ="none"
         };
       };
-      setInterval(incr(0.05),50);
+      var numb = 0;
+        function incr(x) {
+          bytes += x;
+          document.getElementById("numb").innerHTML = numb;
+        };
+      setInterval(function(){incr(1);}, 1000);
     </script>
   </head>
   <body onLoad="show(0)">
     <header>
       <h1><b>Numerical Recursion</b><h1>
+      <p><a id="numb">0</a></p>
     </header>
     <nav>
       <button type="button" onClick="show(0)">Functions</button>
