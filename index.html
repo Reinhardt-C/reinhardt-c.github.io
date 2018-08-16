@@ -4,6 +4,11 @@
     <title>Numerical Recursion</title>
     <script>
       var numb = 0;
+      var numbdisp = 0;
+      function incr(x) {
+        numb += x;
+        numbdisp = math.round(numb);
+        document.getElementById("numbdisp").innerHTML = numbdisp;
       function show(a) {
         if (a === 0) {
           var x = document.getElementById("func");
@@ -30,11 +35,13 @@
           z.style.display ="none"
         };
       };
+      setInterval(incr(0.05),50);
     </script>
   </head>
   <body onLoad="show(0)">
     <header>
       <h1><b>Numerical Recursion</b><h1>
+      <span id="numbdisp">0</span>
     </header>
     <nav>
       <button type="button" onClick="show(0)">Functions</button>
