@@ -6,17 +6,21 @@
   <body>
     <script>
       var gameState = 0;
+      function changeGameState(x) {
+        gameState = x;
+        document.getElementById("gameState").innerHTML = gameState;
+      };
     </script>
     <header>
       <h1><b>Numeric Recursion</b><h1>
     </header>
     <nav>
-      <button type="button" onClick="gameState = 0">Functions</button>
-      <button type="button" onClick="gameState = 1">Computation</button>
-      <button type="button" onClick="gameState = 2">Prestige</button>
+      <button type="button" onClick="changeGameState(0)">Functions</button>
+      <button type="button" onClick="changeGameState(1)">Computation</button>
+      <button type="button" onClick="changeGameState(2)">Prestige</button>
     </nav>
     <section>
-      <p>The current game state is:<a id:"gameState">0</a></p>
+      <p>The current game state ia:<a id:"gameState">0</a></p>
     </section>
   </body>
 </html>
