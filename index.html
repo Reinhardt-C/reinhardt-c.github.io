@@ -8,6 +8,9 @@
         gs = x;
         document.getElementById("gs").innerHTML = gs;
       };
+      function se(x) {
+        if (x = 0) {
+          document.getElementById("func").setAttribute("hidden")
     </script>
   </head>
   <body>
@@ -15,9 +18,9 @@
       <h1><b>Numeric Recursion</b><h1>
     </header>
     <nav>
-      <button type="button" onClick="cgs(0)">Functions</button>
-      <button type="button" onClick="cgs(1)">Computation</button>
-      <button type="button" onClick="cgs(2)">Prestige</button>
+      <button type="button" onClick="cgs(0)" onClick="se(0)">Functions</button>
+      <button type="button" onClick="cgs(1)" onClick="se(1)">Computation</button>
+      <button type="button" onClick="cgs(2)" onClick="se(2)>Prestige</button>
     </nav>
     <section>
       <p>The game state is currently: <span id="gs"></span></p>
