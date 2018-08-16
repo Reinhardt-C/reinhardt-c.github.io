@@ -3,24 +3,52 @@
   <head>
     <title>Numerical Recursion</title>
     <script>
-      function hide() {
-        var x = document.getElementById("func");
-        x.style.display ="none"
-      }
+      function show(a) {
+        if (a = 0) {
+          var x = document.getElementById("func");
+          x.style.display ="block"
+          var y = document.getElementById("comp");
+          y.style.display ="none"
+          var z = document.getElementById("pres");
+          z.style.display ="none"
+        };
+        if (a = 1) {
+          var x = document.getElementById("comp");
+          x.style.display ="block"
+          var y = document.getElementById("func");
+          y.style.display ="none"
+          var z = document.getElementById("pres");
+          z.style.display ="none"
+        };
+        if (a = 2) {
+          var x = document.getElementById("pres");
+          x.style.display ="block"
+          var y = document.getElementById("comp");
+          y.style.display ="none"
+          var z = document.getElementById("func");
+          z.style.display ="none"
+        };
+      };
     </script>
   </head>
   <body>
     <header>
-      <h1><b>Numerical Recursion</b><h1>
+      <h1><b>Numerica Recursion</b><h1>
     </header>
     <nav>
-      <button type="button" onClick="hide()">Functions</button>
-      <button type="button" onClick="hide()">Computation</button>
-      <button type="button" onClick="hide()">Prestige</button>
+      <button type="button" onClick="show(0)">Functions</button>
+      <button type="button" onClick="show(1)">Computation</button>
+      <button type="button" onClick="show(2)">Prestige</button>
     </nav>
     <section>
       <div id="func">
         <h2>Functions</h2>
+      </div>
+      <div id="comp">
+        <h2>Computation</h2>
+      </div>
+      <div id="pres">
+        <h2>Prestige</h2>
       </div>
     </section>
   </body>
