@@ -62,6 +62,7 @@
             t1f += 1;
             part -= 5;
             document.getElementById("part").innerHTML = part;
+            document.getElementById("t1f").innerHTML = t1f;
           };
         };
       };
@@ -81,7 +82,7 @@
     <section>
       <div id="fluc">
         <h2>Fluctuators</h2>
-        <p>0 <button type="button" onClick="prchsg(0)">Tier I Fluxon Generator 5₽</button></p>
+        <p><a id="t1f">0</a> <button type="button" onClick="prchsg(0)">Tier I Fluxon Generator 5₽</button></p>
       </div>
       <div id="fiel">
         <h2>Quantum Fields</h2>
