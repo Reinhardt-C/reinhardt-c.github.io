@@ -35,20 +35,6 @@
         document.getElementById("part").innerHTML = part;
       };
       setInterval(function(){incr(1);}, 1000);
-      var fields = [0,0,0,0,0,0];
-      var fieldc = [10,100,1000,10000,100000,1000000];
-      function prchsf(x) {
-        if (part >= fieldc[x]) {
-          fields[x] += 1;
-          part -= fieldc[x];
-        };
-        document.getElementById("fields0"}].innerHTML = fields[0];
-        document.getElementById("fields1"}].innerHTML = fields[1];
-        document.getElementById("fields2"}].innerHTML = fields[2];
-        document.getElementById("fields3"}].innerHTML = fields[3];
-        document.getElementById("fields4"}].innerHTML = fields[4];
-        document.getElementById("fields5"}].innerHTML = fields[5];                         
-      };
     </script>
   </head>
   <body onLoad="show(0)">
@@ -65,10 +51,8 @@
       <div id="fluc">
         <h2>Fluctuators</h2>
       </div>
-      <div id="comp">
+      <div id="fiel">
         <h2>Quantum Fields</h2>
-        <button type="button" onClick="prchsf(0)">Up Quark Field</button>
-        <p><a id="fields0">0</a></p>
       </div>
       <div id="pres">
         <h2>Prestige</h2>
