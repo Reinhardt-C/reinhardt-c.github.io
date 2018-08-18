@@ -34,10 +34,12 @@
         part += x;
         document.getElementById("part").innerHTML = part;
       };
+      var fields = 0;
       function prchsf(x) {
         if (x === 0) {
           if (part >= 5) {
             part -= 5;
+            fields += 1;
             document.getElementById("part").innerHTML = part;
             var a = document.getElementById("up");
             a.style.display ="none"
@@ -46,6 +48,7 @@
         if (x === 1) {
           if (part >= 25) {
             part -= 25;
+            fields += 1;
             document.getElementById("part").innerHTML = part;
             var b = document.getElementById("down");
             b.style.display ="none"
