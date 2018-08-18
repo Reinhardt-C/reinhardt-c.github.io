@@ -37,8 +37,8 @@
       var fields = 0;
       function prchsf(x) {
         if (x === 0) {
-          if (part >= 5) {
-            part -= 5;
+          if (part >= 125) {
+            part -= 125;
             fields += 1;
             document.getElementById("part").innerHTML = part;
             var a = document.getElementById("up");
@@ -46,8 +46,8 @@
           };
         };
         if (x === 1) {
-          if (part >= 25) {
-            part -= 25;
+          if (part >= 3125) {
+            part -= 3125;
             fields += 1;
             document.getElementById("part").innerHTML = part;
             var b = document.getElementById("down");
@@ -58,9 +58,9 @@
       var t1f = 0;
       function prchsg(x) {
         if (x === 0) {
-          if (part >= 5) {
+          if (part >= 10) {
             t1f += 1;
-            part -= 5;
+            part -= 10;
             document.getElementById("part").innerHTML = part;
             document.getElementById("t1f").innerHTML = t1f;
           };
@@ -82,12 +82,12 @@
     <section>
       <div id="fluc">
         <h2>Fluctuators</h2>
-        <p><a id="t1f">0</a> <button type="button" onClick="prchsg(0)">Tier I Fluxon Generator 5₽</button></p>
+        <p><a id="t1f">0</a> <button type="button" onClick="prchsg(0)">Tier I Fluxon Generator 10₽</button></p>
       </div>
       <div id="fiel">
         <h2>Quantum Fields</h2>
-        <button type="button" id="up" onClick="prchsf(0)">Up Quark Field 5₽</button>
-        <button type="button" id="down" onClick="prchsf(1)">Down Quark Field 25₽</button>
+        <button type="button" id="up" onClick="prchsf(0)">Up Quark Field 125₽</button>
+        <button type="button" id="down" onClick="prchsf(1)">Down Quark Field 3125₽</button>
       </div>
       <div id="pres">
         <h2>Prestige</h2>
