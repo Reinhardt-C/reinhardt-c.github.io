@@ -34,8 +34,14 @@
         part += x;
         document.getElementById("part").innerHTML = part;
       };
-      var fields = 0;
       function prchsf(x) {
+        if (x === 0) {
+          if (part >= 5) {
+            part -= 5;
+            var a = document,getElementById("up");
+            a.style.display ="none"
+          };
+        };
       };
       setInterval(function(){incr(1);}, 1000);
     </script>
@@ -56,7 +62,7 @@
       </div>
       <div id="fiel">
         <h2>Quantum Fields</h2>
-        <button type="button" onClick="prchsf(0)">Up Quark Field</button>
+        <button type="button" id="up" onClick="prchsf(0)">Up Quark Field</button>
         <button type="button" onClick="prchsf(1)">Down Quark Field</button>
       </div>
       <div id="pres">
