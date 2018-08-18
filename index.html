@@ -57,6 +57,13 @@
       };
       var t1f = 0;
       function prchsg(x) {
+        if (x === 0) {
+          if (part >= 5) {
+            t1f += 1;
+            part -= 5;
+            document.getElementById("part").innerHTML = part;
+          };
+        };
       };
       setInterval(function(){incr(t1f*2**fields);}, 1000);
     </script>
