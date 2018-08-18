@@ -7,13 +7,13 @@
         if (a === 0) {
           var x = document.getElementById("fluc");
           x.style.display ="block"
-          var y = document.getElementById("comp");
+          var y = document.getElementById("fiel");
           y.style.display ="none"
           var z = document.getElementById("pres");
           z.style.display ="none"
         };
         if (a === 1) {
-          var x = document.getElementById("comp");
+          var x = document.getElementById("fiel");
           x.style.display ="block"
           var y = document.getElementById("fluc");
           y.style.display ="none"
@@ -23,15 +23,15 @@
         if (a === 2) {
           var x = document.getElementById("pres");
           x.style.display ="block"
-          var y = document.getElementById("comp");
+          var y = document.getElementById("fiel");
           y.style.display ="none"
           var z = document.getElementById("fluc");
           z.style.display ="none"
         };
       };
-      var numb = 0;
+      var part = 0;
       function incr(x) {
-        numb += x;
+        part += x;
         document.getElementById("part").innerHTML = part;
       };
       setInterval(function(){incr(1);}, 1000);
@@ -40,11 +40,11 @@
   <body onLoad="show(0)">
     <header>
       <h1><b>Quantum Flux</b><h1>
-      <p><a id="part">0</a></p>
+      <p>You have <a id="part">0</a> Particles</p>
     </header>
     <nav>
       <button type="button" onClick="show(0)">Fluctuators</button>
-      <button type="button" onClick="show(1)">Computation</button>
+      <button type="button" onClick="show(1)">Quantum Fields</button>
       <button type="button" onClick="show(2)">Prestige</button>
     </nav>
     <section>
@@ -52,7 +52,7 @@
         <h2>Fluctuators</h2>
       </div>
       <div id="comp">
-        <h2>Computation</h2>
+        <h2>Quantum Fields</h2>
       </div>
       <div id="pres">
         <h2>Prestige</h2>
