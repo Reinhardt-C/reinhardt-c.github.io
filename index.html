@@ -32,7 +32,6 @@
       var part = 10;
       function incr(x) {
         part += x;
-        part = Math.round((part*10)/10)
         document.getElementById("part").innerHTML = part;
       };
       var fields = 0;
@@ -76,7 +75,7 @@
           };
         };
       };
-      setInterval(function(){incr((t1f*2**fields)/10);}, 100);
+      setInterval(function(){incr((t1f*2**fields)/2);}, 500);
     </script>
   </head>
   <body onLoad="show(0)">
