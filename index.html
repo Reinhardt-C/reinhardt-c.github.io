@@ -43,6 +43,14 @@
             a.style.display ="none"
           };
         };
+        if (x === 1) {
+          if (part >= 25) {
+            part -= 25;
+            document.getElementById("part").innerHTML = part;
+            var b = document.getElementById("down");
+            b.style.display ="none"
+          };
+        };
       };
       setInterval(function(){incr(1);}, 1000);
     </script>
@@ -63,8 +71,8 @@
       </div>
       <div id="fiel">
         <h2>Quantum Fields</h2>
-        <button type="button" id="up" onClick="prchsf(0)">Up Quark Field</button>
-        <button type="button" onClick="prchsf(1)">Down Quark Field</button>
+        <button type="button" id="up" onClick="prchsf(0)">Up Quark Field<br>5</button>
+        <button type="button" id="down" onClick="prchsf(1)">Down Quark Field<br>25</button>
       </div>
       <div id="pres">
         <h2>Prestige</h2>
