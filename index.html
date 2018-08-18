@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Numerical Recursion</title>
+    <title>Quantum Flux</title>
     <script>
       function show(a) {
         if (a === 0) {
-          var x = document.getElementById("func");
+          var x = document.getElementById("fluc");
           x.style.display ="block"
           var y = document.getElementById("comp");
           y.style.display ="none"
@@ -15,7 +15,7 @@
         if (a === 1) {
           var x = document.getElementById("comp");
           x.style.display ="block"
-          var y = document.getElementById("func");
+          var y = document.getElementById("fluc");
           y.style.display ="none"
           var z = document.getElementById("pres");
           z.style.display ="none"
@@ -25,31 +25,31 @@
           x.style.display ="block"
           var y = document.getElementById("comp");
           y.style.display ="none"
-          var z = document.getElementById("func");
+          var z = document.getElementById("fluc");
           z.style.display ="none"
         };
       };
       var numb = 0;
       function incr(x) {
         numb += x;
-        document.getElementById("numb").innerHTML = numb;
+        document.getElementById("part").innerHTML = part;
       };
       setInterval(function(){incr(1);}, 1000);
     </script>
   </head>
   <body onLoad="show(0)">
     <header>
-      <h1><b>Numerical Recursion</b><h1>
-      <p><a id="numb">0</a></p>
+      <h1><b>Quantum Flux</b><h1>
+      <p><a id="part">0</a></p>
     </header>
     <nav>
-      <button type="button" onClick="show(0)">Functions</button>
+      <button type="button" onClick="show(0)">Fluctuators</button>
       <button type="button" onClick="show(1)">Computation</button>
       <button type="button" onClick="show(2)">Prestige</button>
     </nav>
     <section>
-      <div id="func">
-        <h2>Functions</h2>
+      <div id="fluc">
+        <h2>Fluctuators</h2>
       </div>
       <div id="comp">
         <h2>Computation</h2>
