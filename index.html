@@ -47,11 +47,20 @@
         };
         if (x === 1) {
           if (part >= 3125) {
-            part -= 3125;
+            pasrt -= 3125;
             fields += 1;
             document.getElementById("part").innerHTML = part;
             var b = document.getElementById("down");
             b.style.display ="none"
+          };
+        };
+        if (x === 2) {
+          if (part >= 78125) {
+            pasrt -= 78125;
+            fields += 1;
+            document.getElementById("part").innerHTML = part;
+            var b = document.getElementById("charm");
+            c.style.display ="none"
           };
         };
       };
@@ -66,7 +75,7 @@
           };
         };
       };
-      setInterval(function(){incr(t1f*2**fields);}, 1000);
+      setInterval(function(){incr((t1f*2**fields)/20);}, 50);
     </script>
   </head>
   <body onLoad="show(0)">
@@ -88,6 +97,7 @@
         <h2>Quantum Fields</h2>
         <button type="button" id="up" onClick="prchsf(0)">Up Quark Field 125₽</button>
         <button type="button" id="down" onClick="prchsf(1)">Down Quark Field 3125₽</button>
+        <button type="button" id="charm" onClick="prchsf(2)">Charm Quark Field 78125₽</button>
       </div>
       <div id="pres">
         <h2>Prestige</h2>
