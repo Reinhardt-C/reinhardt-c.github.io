@@ -55,7 +55,10 @@
           };
         };
       };
-      setInterval(function(){incr(1);}, 1000);
+      var t1f = 0;
+      function prchsg(x) {
+      };
+      setInterval(function(){incr(t1f*2**fields);}, 1000);
     </script>
   </head>
   <body onLoad="show(0)">
@@ -71,7 +74,7 @@
     <section>
       <div id="fluc">
         <h2>Fluctuators</h2>
-        <p>0 <button type="button">Tier I Fluxon Generator 5₽</button></p>
+        <p>0 <button type="button" onClick="prchsg(0)">Tier I Fluxon Generator 5₽</button></p>
       </div>
       <div id="fiel">
         <h2>Quantum Fields</h2>
