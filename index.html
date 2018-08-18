@@ -34,6 +34,7 @@
         part += x;
         document.getElementById("part").innerHTML = part;
       };
+      setInterval(function(){incr(1);}, 1000);
       var fields = [0,0,0,0,0,0];
       var fieldc = [10,100,1000,10000,100000,1000000];
       function prchsf(x) {
@@ -48,7 +49,6 @@
         document.getElementById("fields4"}].innerHTML = fields[4];
         document.getElementById("fields5"}].innerHTML = fields[5];                         
       };
-      setInterval(function(){incr(1);}, 1000);
     </script>
   </head>
   <body onLoad="show(0)">
