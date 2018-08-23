@@ -90,12 +90,10 @@
           };
         };
       };
-      var partdisp = 10;
-      var totdisp = 10;
       function upd() {
-        partdisp = Math.round(part);
+        var partdisp = Math.round(part);
         document.getElementById("partdisp").innerHTML = partdisp;
-        totdisp = Math.round(tot);
+        var totdisp = Math.round(tot);
         document.getElementById("totdisp").innerHTML = totdisp;
       };
       setInterval(function(){incr((t1f*1000000000**strvibr));}, 1000);
