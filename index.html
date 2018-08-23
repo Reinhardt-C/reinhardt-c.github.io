@@ -33,6 +33,8 @@
       function incr(x) {
         part += x;
         document.getElementById("part").innerHTML = part;
+        tot += x;
+        document.getElementById("tot").innerHTML = tot;
       };
       function ig1(x) {
         t1f += x;
@@ -96,6 +98,7 @@
     <header>
       <h1><b>Quantum Flux</b></h1>
       <p><h2><a id="part">10</a>₽</h2></p>
+      <p><h6><a id="tot">10</a> particles have been produced</h6></p>
     </header>
     <nav>
       <button type="button" onClick="show(0)">Fluctuators</button>
