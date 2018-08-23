@@ -29,10 +29,10 @@
           z.style.display ="none"
         };
       };
-      var part = 1000000;
-      var tot = part;
-      var partdisp = part.toExponential();
-      var totdisp = tot.toExponential();
+      var part = 10;
+      var tot = 10;
+      var partdisp = 10;
+      var totdisp = 10n
       function incr(x) {
         part += x;
         tot += x;
@@ -54,6 +54,7 @@
             part -= 125;
             strvibr += 1;
             document.getElementById("part").innerHTML = part;
+            document.getElementById("partdisp").innerHTML = partdisp;
             var a = document.getElementById("1");
             a.style.display ="none"
           };
@@ -63,6 +64,7 @@
             part -= 3125;
             strvibr += 1;
             document.getElementById("part").innerHTML = part;
+            document.getElementById("partdisp").innerHTML = partdisp;
             var b = document.getElementById("2");
             b.style.display ="none"
           };
@@ -72,6 +74,7 @@
             part -= 78125;
             strvibr += 1;
             document.getElementById("part").innerHTML = part;
+            document.getElementById("partdisp").innerHTML = partdisp;
             var c = document.getElementById("3");
             c.style.display ="none"
           };
@@ -85,6 +88,7 @@
             t1f += 1;
             part -= 10;
             document.getElementById("part").innerHTML = part;
+            document.getElementById("partdisp").innerHTML = partdisp;
             document.getElementById("t1f").innerHTML = t1f;
           };
         };
@@ -93,6 +97,7 @@
             t2f += 1;
             part -= 8000;
             document.getElementById("part").innerHTML = part;
+            document.getElementById("partdisp").innerHTML = partdisp;
             document.getElementById("t2f").innerHTML = t2f;
           };
         };
