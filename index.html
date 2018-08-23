@@ -90,15 +90,24 @@
           };
         };
       };
+      var partdisp = 10;
+      var totdisp = 10;
+      function upd() {
+        partdisp = Math.round(part);
+        document.getElementById("partdisp").innerHTML = partdisp;
+        totdisp = Math.round(tot);
+        document.getElementById("totdisp").innerHTML = totdisp;
+      };
       setInterval(function(){incr((t1f*1000000000**strvibr));}, 1000);
       setInterval(function(){ig1(t2f);},1000);
+      setInterval(function(){upd();),50);
     </script>
   </head>
   <body onLoad="show(0)">
     <header>
       <h1><b>Quantum Flux</b></h1>
-      <p><h2><a id="part">10</a>₽</h2></p>
-      <p><h6><a id="tot">10</a> particles have been produced</h6></p>
+      <p><h2><a id="partdisp">10</a>₽</h2></p>
+      <p><h6><a id="totdisp">10</a> particles have been produced</h6></p>
     </header>
     <nav>
       <button type="button" onClick="show(0)">Fluctuators</button>
