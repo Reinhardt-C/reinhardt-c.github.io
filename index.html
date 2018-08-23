@@ -38,8 +38,8 @@
         tot += x;
         document.getElementById("part").innerHTML = part;
         document.getElementById("tot").innerHTML = tot;
-        partdisp = part.toExponential();
-        totdisp = tot.toExponential();
+        partdisp = part.toExponential(2);
+        totdisp = tot.toExponential(2);
         document.getElementById("partdisp").innerHTML = partdisp;
         document.getElementById("totdisp").innerHTML = totdisp;
       };
@@ -54,7 +54,7 @@
             part -= 125;
             strvibr += 1;
             document.getElementById("part").innerHTML = part;
-            partdisp = part.toExponential();
+            partdisp = part.toExponential(2);
             document.getElementById("partdisp").innerHTML = partdisp;
             var a = document.getElementById("1");
             a.style.display ="none"
@@ -65,7 +65,7 @@
             part -= 3125;
             strvibr += 1;
             document.getElementById("part").innerHTML = part;
-            partdisp = part.toExponential();
+            partdisp = part.toExponential(2);
             document.getElementById("partdisp").innerHTML = partdisp;
             var b = document.getElementById("2");
             b.style.display ="none"
@@ -76,7 +76,7 @@
             part -= 78125;
             strvibr += 1;
             document.getElementById("part").innerHTML = part;
-            partdisp = part.toExponential();
+            partdisp = part.toExponential(2);
             document.getElementById("partdisp").innerHTML = partdisp;
             var c = document.getElementById("3");
             c.style.display ="none"
@@ -91,7 +91,7 @@
             t1f += 1;
             part -= 10;
             document.getElementById("part").innerHTML = part;
-            partdisp = part.toExponential();
+            partdisp = part.toExponential(2);
             document.getElementById("partdisp").innerHTML = partdisp;
             document.getElementById("t1f").innerHTML = t1f;
           };
@@ -101,7 +101,7 @@
             t2f += 1;
             part -= 8000;
             document.getElementById("part").innerHTML = part;
-            partdisp = part.toExponential();
+            partdisp = part.toExponential(2);
             document.getElementById("partdisp").innerHTML = partdisp;
             document.getElementById("t2f").innerHTML = t2f;
           };
