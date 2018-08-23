@@ -7,13 +7,13 @@
         if (a === 0) {
           var x = document.getElementById("fluc");
           x.style.display ="block"
-          var y = document.getElementById("fiel");
+          var y = document.getElementById("strv");
           y.style.display ="none"
           var z = document.getElementById("pres");
           z.style.display ="none"
         };
         if (a === 1) {
-          var x = document.getElementById("fiel");
+          var x = document.getElementById("strv");
           x.style.display ="block"
           var y = document.getElementById("fluc");
           y.style.display ="none"
@@ -23,7 +23,7 @@
         if (a === 2) {
           var x = document.getElementById("pres");
           x.style.display ="block"
-          var y = document.getElementById("fiel");
+          var y = document.getElementById("strv");
           y.style.display ="none"
           var z = document.getElementById("fluc");
           z.style.display ="none"
@@ -38,32 +38,32 @@
         t1f += x;
         document.getElementById("t1f").innerHTML = t1f;
       };
-      var fields = 0;
-      function prchsf(x) {
+      var strvibr = 0;
+      function prchss(x) {
         if (x === 0) {
           if (part >= 125) {
             part -= 125;
-            fields += 1;
+            strvibr += 1;
             document.getElementById("part").innerHTML = part;
-            var a = document.getElementById("up");
+            var a = document.getElementById("1");
             a.style.display ="none"
           };
         };
         if (x === 1) {
           if (part >= 3125) {
             part -= 3125;
-            fields += 1;
+            strvibr += 1;
             document.getElementById("part").innerHTML = part;
-            var b = document.getElementById("down");
+            var b = document.getElementById("2");
             b.style.display ="none"
           };
         };
         if (x === 2) {
           if (part >= 78125) {
             part -= 78125;
-            fields += 1;
+            strvibr += 1;
             document.getElementById("part").innerHTML = part;
-            var b = document.getElementById("charm");
+            var b = document.getElementById("3");
             c.style.display ="none"
           };
         };
@@ -99,7 +99,7 @@
     </header>
     <nav>
       <button type="button" onClick="show(0)">Fluctuators</button>
-      <button type="button" onClick="show(1)">Quantum Fields</button>
+      <button type="button" onClick="show(1)">String Vibrations</button>
       <button type="button" onClick="show(2)">Prestige</button>
     </nav>
     <section>
@@ -109,12 +109,12 @@
         <p><a id="t1f">0</a> <button type="button" onClick="prchsg(0)">Fluxon Generator 10₽</button></p>
         <p><a id="t2f">0</a> <button type="button" onClick="prchsg(1)">Assembly Chain 8000₽</button></p>
       </div>
-      <div id="fiel">
-        <h2>Quantum Fields</h2>
+      <div id="strv">
+        <h2>String Vibration Modes</h2>
         <p>Fields allow more particles to be made, therefore doubling your particle production rate.</p>
-        <button type="button" id="up" onClick="prchsf(0)">Up Quark Field 125₽</button>
-        <button type="button" id="down" onClick="prchsf(1)">Down Quark Field 3125₽</button>
-        <button type="button" id="charm" onClick="prchsf(2)">Charm Quark Field 78125₽</button>
+        <button type="button" id="1" onClick="prchsf(0)">Type Ia 125₽</button>
+        <button type="button" id="2 onClick="prchsf(1)">Type Ib 3125₽</button>
+        <button type="button" id="3" onClick="prchsf(2)">Type Ic Field 78125₽</button>
       </div>
       <div id="pres">
         <h2>Prestige</h2>
