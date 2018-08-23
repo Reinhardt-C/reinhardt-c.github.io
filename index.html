@@ -91,9 +91,9 @@
         };
       };
       function upd() {
-        var partdisp = Math.round(part);
+        var partdisp = part.toExponential(2);
         document.getElementById("partdisp").innerHTML = partdisp;
-        var totdisp = Math.round(tot);
+        var totdisp = tot.toExponential(2);
         document.getElementById("totdisp").innerHTML = totdisp;
       };
       setInterval(function(){incr((t1f*1000000000**strvibr));}, 1000);
