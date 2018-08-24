@@ -36,13 +36,7 @@
         tot += x;
         document.getElementById("part").innerHTML = part;
         document.getElementById("tot").innerHTML = tot;
-      };
-      function upd() {
-        var partdisp = part.toExponential(2);
-        document.getElementById("partdisp").innerHTML = partdisp;
-        var totdisp = tot.toExponential(2);
-        document.getElementById("totdisp").innerHTML = totdisp;
-      };
+      }:
       function ig1(x) {
         t1f += x;
         document.getElementById("t1f").innerHTML = t1f;
@@ -98,14 +92,13 @@
       };
       setInterval(function(){incr((t1f*2**strvibr));}, 1000);
       setInterval(function(){ig1(t2f);},1000);
-      setInterval(function(){upd();},50);
     </script>
   </head>
   <body onLoad="show(0)">
     <header>
       <h1><b>Quantum Flux</b></h1>
-      <p><h2><a id="partdisp">10</a>₽</h2></p>
-      <p><h6><a id="totdisp">10</a> particles have been produced</h6></p>
+      <p><h2><a id="part">10</a>₽</h2></p>
+      <p><h6><a id="tot">10</a> particles have been produced</h6></p>
     </header>
     <nav>
       <button type="button" onClick="show(0)">Fluctuators</button>
