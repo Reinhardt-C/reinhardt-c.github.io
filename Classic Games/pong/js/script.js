@@ -8,10 +8,40 @@ class Thingy {
 		stroke(255);
 		rectMode(CENTER);
 		for (let i of balls) this.ballOverlaps(i);
-		// if (this.left) {
-		// 	if (balls[0].y - height / 2 > this.pos) this.down();
-		// 	else this.up();
-		// }
+		if (ai && this.left) {
+			switch (ai) {
+				case 0:
+					if (balls[0].y - height / 2 > this.pos) this.down();
+					else this.up();
+					break;
+				case 1:
+					if (balls[0].y - height / 2 > this.pos && balls[0].vely > 0) this.down();
+					else if (balls[0].y - height / 2 < this.pos && balls[0].vely < 0) this.up();
+					break;
+				case 2:
+					let xpos = balls[0].x;
+					let ypos = balls[0].y;
+					let xvel = balls[0].xvel;
+					let yvel = balls[0].yvel;
+					/* 
+						500 = xvel * x + ypos
+						x = (500 - ypos) / xvel - Hits bottom
+
+						0 = xvel * x + ypos
+						x = (0 - ypos) / xvel - Hits top
+					*/
+					let x1 = (500 - ypos) / xvel;
+					let x2 = (0 - ypos) / xvel;
+					if (0 < x1 && x1 < 500) ypos = 500;
+					else if (0 < x2 && x2 < 500) ypos = 0;
+					else {
+					}
+					while (x > 0) {
+						xvel *= -1;
+					}
+					break;
+			}
+		}
 		rect(this.left ? 5 : width - 5, this.pos + height / 2, 5, 100);
 	}
 
@@ -68,7 +98,8 @@ class Ball {
 
 let thingies = [],
 	balls = [];
-let chaosMode = false;
+let chaosMode = false,
+	ai = false;
 
 function setup() {
 	createCanvas(500, 500);
