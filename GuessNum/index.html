@@ -1,0 +1,49 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Number Checker</title>
+
+		<script>
+			const isPrime = num => {
+				for (let i = 2, s = Math.sqrt(num); i <= s; i++) if (num % i === 0) return false;
+				return num > 1;
+			};
+
+			const isMult = (num, div) => num % div == 0;
+
+			const sumDigits = num =>
+				(num + "")
+					.split("")
+					.map(parseFloat)
+					.reduce((a, b) => a + b);
+
+			const isPalindrome = num => num + "" == (num + "").split("").reverse().join("");
+
+			const digContain = (num, dig) => (num + "").split("").includes(dig + "");
+
+			const checkNum = num => {
+				num = parseFloat(num) || 0;
+				if (num < 4000) return false;
+				if (num > 17500) return false;
+				if (isPrime(num)) return false;
+				if (isMult(num, 3)) return false;
+				if (isMult(num, 2)) return false;
+				if (isPalindrome(num)) return false;
+				if (!isPrime(sumDigits(num))) return false;
+				if (!digContain(num, 0)) return false;
+				return true;
+			};
+
+			const $ = id => document.getElementById(id);
+
+			setInterval(() => {
+				$("out").value = checkNum($("in").value);
+			}, 50);
+		</script>
+	</head>
+	<body>
+		<input id="in" placeholder="Number here" />
+		<input id="out" readonly />
+	</body>
+</html>
