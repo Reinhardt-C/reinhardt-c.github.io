@@ -1,0 +1,109 @@
+{
+	"cards": [
+		{
+			"id": "alkene-alkane",
+			"name": "alkene to alkane",
+			"questions": ["type", "reactant", "condition", "reagent"],
+			"answers": ["Addition", "H2", "Heat", "None"]
+		},
+		{
+			"id": "alkene-alcohol",
+			"name": "alkene to alcohol",
+			"questions": ["type", "condition", "reagent"],
+			"answers": ["Addition", "Heat", "None"]
+		},
+		{
+			"id": "alcohol-alkene",
+			"name": "alcohol to alkene",
+			"questions": ["type", "reactant"],
+			"answers": ["Elimination", "H2SO4 (concentrated)"]
+		},
+		{
+			"id": "alcohol-carboxylic acid",
+			"name": "alcohol to carboxylic acid",
+			"questions": ["type", "condition", "reagent"],
+			"answers": ["Oxidation", "Heat", "MnO4/H+"]
+		},
+		{
+			"id": "alkane-haloalkane",
+			"name": "alkane to haloalkane",
+			"questions": ["type", "condition", "reactant"],
+			"answers": ["Substitution", "UV Light", "Halogen"]
+		},
+		{
+			"id": "alkene-haloalkane",
+			"name": "alkene to haloalkane",
+			"questions": ["type", "reactant"],
+			"answers": ["Addition", "Hydrogen Halide"]
+		},
+		{
+			"id": "haloalkane-alkene",
+			"name": "haloalkane to alkene",
+			"questions": ["type", "condition", "reactant"],
+			"answers": ["Elimination", "Alcoholic Solution", "Hydroxide"]
+		},
+		{
+			"id": "haloalkane-amine",
+			"name": "haloalkane to amine",
+			"questions": ["type", "reactant"],
+			"answers": ["Substitution", "NH3 (concentrated)"]
+		},
+		{
+			"id": "haloalkane-alcohol",
+			"name": "haloalkane to alcohol",
+			"questions": ["type", "condition", "reactant"],
+			"answers": ["Substitution", "Aqueous Solution", "Hydroxide"]
+		},
+		{
+			"id": "alcohol-haloalkane",
+			"name": "alcohol to haloalkane",
+			"questions": ["type", "reactant"],
+			"answers": ["Substitution", "Hydrogen Halide"]
+		},
+		{
+			"id": "alkene-dihaloalkane",
+			"name": "alkene to dihaloalkane",
+			"questions": ["type", "reactant"],
+			"answers": ["Addition", "Halogen"]
+		},
+		{
+			"id": "alkene-diol",
+			"name": "alkene to diol",
+			"questions": ["type", "reagent"],
+			"answers": ["Oxidation", "MnO4/H+"]
+		},
+		{
+			"id": "alkene-polymer",
+			"name": "alkene to polymer",
+			"questions": ["type", "condition"],
+			"answers": ["Polymerisation", "Catalyst"]
+		}
+	],
+	"questions": {
+		"type": ["Addition", "Substitution", "Elimination", "Oxidation", "Polymerisation"],
+		"reactant": [
+			"H2",
+			"Halogen",
+			"Oxidant",
+			"Hydrogen Halide",
+			"NH3 (concentrated)",
+			"Hydroxide",
+			"H2SO4 (concentrated)"
+		],
+		"reagent": ["None", "H20/H+", "MnO4/H+"],
+		"condition": [
+			"Heat",
+			"UV Light",
+			"Aqueous Solution",
+			"Alcoholic Solution",
+			"Acidic Solution",
+			"Catalyst"
+		]
+	},
+	"question_text": {
+		"type": "What is the type of the $ reaction?",
+		"reactant": "What is the other reactant in a $ reaction?",
+		"reagent": "What is a reagent for the $ reaction?",
+		"condition": "What is a condition that must be met for the $ reaction?"
+	}
+}
