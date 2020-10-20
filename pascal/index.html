@@ -61,12 +61,16 @@
 				}
 			}
 
-			let xscale, yscale, P, showZeroes;
+			let xscale, yscale, fontScale, P, showZeroes, xshift, yshift, nudge;
 
 			function setup() {
-				createCanvas(window.outerWidth, window.outerHeight);
-				xscale = 80;
-				yscale = 20;
+				createCanvas(window.innerWidth, window.innerHeight);
+				xscale = 140;
+				yscale = 40;
+				fontScale = 60;
+				xshift = 0;
+				yshift = 0;
+				nudge = 2000;
 				P = new Pascal(-width / (xscale * 2) + 1, -1);
 				showZeroes = false;
 			}
@@ -74,23 +78,56 @@
 			function update() {
 				let w = Math.floor(width / xscale);
 				let h = Math.floor(height / yscale);
-				for (let i = 0; i < h + 1; i++) {
-					for (let j = 0; j < w + 1; j++) {
+				if (xshift > 1) {
+					P.x++;
+					xshift = 0;
+				}
+				if (xshift < 0) {
+					P.x--;
+					xshift = 1;
+				}
+				if (yshift > 1) {
+					P.y += 2;
+					yshift = 0;
+				}
+				if (yshift < 0) {
+					P.y -= 2;
+					yshift = 1;
+				}
+				push();
+				translate(-xshift * xscale, -yshift * yscale * 2);
+				for (let i = 0; i < h + 3; i++) {
+					for (let j = 0; j < w + 2; j++) {
 						let t = P.valueAt(j, i);
 						textAlign(CENTER);
-						textSize(20 / t.toString().length ** 0.45);
+						textSize(fontScale / t.toString().length ** 0.76);
 						if (t !== 0 || showZeroes) text(t, xscale * (j + (i % 2) / 2), yscale * i);
 					}
 				}
+				pop();
 			}
 
 			function draw() {
 				background(255);
 				update();
-				if (keyIsDown(87)) P.y -= 2;
-				if (keyIsDown(83)) P.y += 2;
-				if (keyIsDown(65)) P.x -= 1;
-				if (keyIsDown(68)) P.x += 1;
+				if (keyIsDown(87)) P.y -= Math.ceil(Math.sqrt(40 / yscale) / 2) * 2;
+				if (keyIsDown(83)) P.y += Math.ceil(Math.sqrt(40 / yscale) / 2) * 2;
+				if (keyIsDown(65)) P.x -= Math.ceil(Math.sqrt(40 / xscale));
+				if (keyIsDown(68)) P.x += Math.ceil(Math.sqrt(40 / xscale));
+				if (keyIsDown(38)) yshift -= (4 * yscale) / nudge;
+				if (keyIsDown(40)) yshift += (4 * yscale) / nudge;
+				if (keyIsDown(37)) xshift -= (4 * xscale) / nudge;
+				if (keyIsDown(39)) xshift += (4 * xscale) / nudge;
+				if (keyIsDown(189)) {
+					if (keyIsDown(16)) yscale--;
+					else if (keyIsDown(18)) fontScale--;
+					else xscale--;
+				}
+				if (keyIsDown(187)) {
+					if (keyIsDown(16)) yscale++;
+					else if (keyIsDown(18)) fontScale++;
+					else xscale++;
+				}
 			}
 		</script>
 	</body>
