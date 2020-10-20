@@ -1,0 +1,97 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Infinite Pascal's Triangle</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="BigInteger.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+		<script>
+			let factorials = {};
+			let biggest = 0;
+			const D = BigInteger.BigInt;
+			function factorial(n) {
+				if (factorials[n] !== undefined) return factorials[n];
+				var result, i;
+				if (n > biggest) {
+					result = D(factorials[biggest]);
+					i = biggest;
+					biggest = n;
+				} else {
+					result = D(1);
+					i = 0;
+				}
+				while (++i <= n) {
+					result = BigInteger.multiply(result, D(i));
+				}
+				factorials[n] = result;
+				return result;
+			}
+			function choose(n, k) {
+				return BigInteger.divide(
+					factorial(n),
+					BigInteger.multiply(factorial(k), factorial(BigInteger.subtract(n, k)))
+				);
+			}
+
+			class Pascal {
+				constructor(x, y) {
+					this.x = x;
+					this.y = y;
+				}
+
+				static entry(row, number) {
+					if (number < 0 || number > row) return 0;
+					return choose(row, number);
+				}
+
+				valueAt(x, y) {
+					let tx = Math.floor(this.x + x);
+					let ty = Math.floor(this.y + y);
+					let xFromLeft = tx + Math.floor(ty / 2);
+					return Pascal.entry(ty, xFromLeft);
+				}
+			}
+
+			let xscale, yscale, P, showZeroes;
+
+			function setup() {
+				createCanvas(window.outerWidth, window.outerHeight);
+				xscale = 80;
+				yscale = 20;
+				P = new Pascal(-width / (xscale * 2) + 1, -1);
+				showZeroes = false;
+			}
+
+			function update() {
+				let w = Math.floor(width / xscale);
+				let h = Math.floor(height / yscale);
+				for (let i = 0; i < h + 1; i++) {
+					for (let j = 0; j < w + 1; j++) {
+						let t = P.valueAt(j, i);
+						textAlign(CENTER);
+						textSize(20 / t.toString().length ** 0.45);
+						if (t !== 0 || showZeroes) text(t, xscale * (j + (i % 2) / 2), yscale * i);
+					}
+				}
+			}
+
+			function draw() {
+				background(255);
+				update();
+				if (keyIsDown(87)) P.y -= 2;
+				if (keyIsDown(83)) P.y += 2;
+				if (keyIsDown(65)) P.x -= 1;
+				if (keyIsDown(68)) P.x += 1;
+			}
+		</script>
+	</body>
+</html>
