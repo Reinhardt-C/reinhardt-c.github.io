@@ -14,15 +14,9 @@ class Set24 {
 			for (let i = 0; i < this.elements.length; i++)
 				if (typeof i == "number")
 					this.elements[i] = new Element(this.elements[i], [], this.elements[i].toString());
-			this.update();
-			for (let i of this.elements) i.available = this.elements.filter(e => e.value !== i.value);
+			for (let i = 0; i < this.elements.length; i++)
+				this.elements[i].available = this.elements.slice(0, i).concat(this.elements.slice(i + 1));
 		}
-	}
-
-	update() {
-		for (let i = 0; i < this.elements.length; i++)
-			if (this.elements.filter(e => e.value == this.elements[i].value).length > 1)
-				this.elements.splice(i--, 1);
 	}
 
 	closure(operation) {
@@ -45,11 +39,11 @@ class Set24 {
 				if (bb) b = `(${b})`;
 				let combinedSource = `${a} ${operation} ${b}`;
 				let newValue = Set24.operations[operation](i.value, j.value);
-				let avail = i.available.filter(e => e.value !== j.value);
+				let index = i.available.indexOf(j);
+				let avail = i.available.slice(0, index).concat(i.available.slice(index + 1));
 				newSet.elements.push(new Element(newValue, avail, combinedSource, operation));
 			}
 		}
-		newSet.update();
 		return newSet;
 	}
 
@@ -76,7 +70,6 @@ function find24(a, b, c, d) {
 			.concat(set3.elements)
 			.concat(set4.elements)
 			.concat(set5.elements);
-		set.update();
 		let filter = set.elements.filter(e => e.value == 24);
 		if (filter.length >= 1) return filter[0].source;
 	}
