@@ -1,0 +1,183 @@
+{
+	"questions": [
+		{
+			"reactant": "Alkane",
+			"product": "Haloalkane",
+			"type": "Substitution",
+			"reagent": "Br2(aq)",
+			"condition": "UV Light"
+		},
+		{
+			"reactant": "Secondary Alcohol",
+			"product": "Ketone",
+			"type": "Oxidation",
+			"reagent": ["MnO4-/H+", "Cr2O7-/H+"]
+		},
+		{
+			"reactant": "Ketone",
+			"product": "Secondary Alcohol",
+			"type": "Reduction",
+			"reagent": ["LiAlH4", "NaBH4"]
+		},
+		{
+			"reactant": "Alkene",
+			"product": "Secondary Alcohol",
+			"type": "Addition",
+			"reagent": "H2O/H+"
+		},
+		{
+			"reactant": "Secondary Alcohol",
+			"product": "Alkene",
+			"type": "Elimination",
+			"reagent": "conc H2SO4"
+		},
+		{
+			"reactant": "Haloalkane",
+			"product": "Alkene",
+			"type": "Elimination",
+			"reagent": "NaOH(alc)"
+		},
+		{
+			"reactant": "Alkene",
+			"product": "Haloalkane",
+			"type": "Addition",
+			"reagent": "Br2(aq)"
+		},
+		{
+			"reactant": "Alkene",
+			"product": "Tertiary Alcohol",
+			"type": "Addition",
+			"reagent": "H2O/H+"
+		},
+		{
+			"reactant": "Tertiary Alcohol",
+			"product": "Haloalkane",
+			"type": "Substitution",
+			"reagent": ["conc HCl", "PCl3", "PCl5", "SOCl2"],
+			"catalyst": "anhyd ZnCl2"
+		},
+		{
+			"reactant": "Haloalkane",
+			"product": "Tertiary Alcohol",
+			"type": "Substitution",
+			"reagent": "NaOH(aq)"
+		},
+		{
+			"reactant": "Alkene",
+			"product": "Alkane",
+			"type": "Addition",
+			"reagent": "H2",
+			"catalyst": ["Pt", "Ni"]
+		},
+		{
+			"reactant": "Alkene",
+			"product": "Primary Alcohol",
+			"type": "Addition",
+			"reagent": "H2O/H+"
+		},
+		{
+			"reactant": "Primary Alcohol",
+			"product": "Alkene",
+			"type": "Elimination",
+			"reagent": "conc H2SO4"
+		},
+		{
+			"reactant": "Haloalkane",
+			"product": "Amine",
+			"type": "Substitution",
+			"reagent": "NH3(alc)"
+		},
+		{
+			"reactant": "Amine",
+			"product": "Amide",
+			"type": "Substitution",
+			"reagent": ["X-COOH", "X-COCl"]
+		},
+		{
+			"reactant": "Primary Alcohol",
+			"product": "Aldehyde",
+			"type": "Oxidation",
+			"reagent": ["MnO4-/H+", "Cr2O7-/H+"]
+		},
+		{
+			"reactant": "Aldehyde",
+			"product": "Primary Alcohol",
+			"type": "Reduction",
+			"reagent": ["LiAlH4", "NaBH4"]
+		},
+		{
+			"reactant": "Primary Alcohol",
+			"product": "Ester",
+			"type": "Esterification",
+			"reagent": ["X-COOH", "X-COCl"],
+			"catalyst": "conc H2SO4"
+		},
+		{
+			"reactant": "Ester",
+			"product": "Primary Alcohol",
+			"type": "Hydrolysis",
+			"reagent": ["H2O/H+", "HSO/OH-"]
+		},
+		{
+			"reactant": "Ester",
+			"product": "Amide",
+			"type": "Hydrolysis",
+			"reagent": "NH3"
+		},
+		{
+			"reactant": "Aldehyde",
+			"product": "Carboxylic Acid",
+			"type": "Oxidation",
+			"reagent": [
+				"MnO4-/H+",
+				"Cr2O7-/H+",
+				"Tollens",
+				"Fehlings",
+				"Benedicts"
+			]
+		},
+		{
+			"reactant": "Carboxylic Acid",
+			"product": "Aldehyde",
+			"type": "Reduction",
+			"reagent": ["LiAlH4", "NaBH4"]
+		},
+		{
+			"reactant": "Carboxylic Acid",
+			"product": "Acyl Chloride",
+			"type": "Substitution",
+			"reagent": ["SOCl2", "PCl3", "PCl5"]
+		},
+		{
+			"reactant": "Acyl Chloride",
+			"product": "Carboxylic Acid",
+			"type": "Substitution",
+			"reagent": "H2O"
+		},
+		{
+			"reactant": "Acyl Chloride",
+			"product": "Amide",
+			"type": "Substitution",
+			"reagent": ["NH3", "X-NH2"]
+		},
+		{
+			"reactant": "Acyl Chloride",
+			"product": "Ester",
+			"type": "Esterification",
+			"reagent": "X-OH"
+		},
+		{
+			"reactant": "Carboxylic Acid",
+			"product": "Ester",
+			"type": "Esterification",
+			"reagent": "X-OH",
+			"catalyst": "conc H2SO4"
+		},
+		{
+			"reactant": "Ester",
+			"product": "Carboxylic Acid",
+			"type": "Hydrolysis",
+			"reagent": "H2O/H+"
+		}
+	]
+}

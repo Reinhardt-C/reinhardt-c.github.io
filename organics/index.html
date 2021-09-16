@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organics</title>
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        #q {
+            position: relative;
+            font-size: 30px;
+            top: 10vh;
+        }
+        #input {
+            position: relative;
+            top: 10vh;
+            width: 75vw;
+            height: 5vw;
+            font-size: 3vw;
+        }
+        #key {
+            position: fixed;
+            text-align: left;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        td {
+            padding-right: 15px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <p id="q"></p>
+    <input id="input" autocomplete="off">
+    <script src="main.js"></script>
+    <div id="key">
+        <strong style="cursor: pointer;" onclick="document.getElementById('table').classList.toggle('hidden')">Key:</strong>
+        <table id="table">
+            <tr>
+                <td>H2</td>
+                <td>Hydrogen</td>
+                <td>H2O</td>
+                <td>Water</td>
+            </tr>
+            <tr>
+                <td>Br2(aq)</td>
+                <td>Bromine (in an aqueous solution)</td>
+                <td>NaOH(alc)</td>
+                <td>Sodium hydroxide (in an alcoholic solution)</td>
+            </tr>
+            <tr>
+                <td>NaOH(aq)</td>
+                <td>Sodium hydroxide (in an aqueous solution)</td>
+                <td>NH3(alc)</td>
+                <td>Ammonia (in an alcoholic solution)</td>
+            </tr>
+            <tr>
+                <td>NH3</td>
+                <td>Ammonia</td>
+                <td>H2O/H+</td>
+                <td>Acidified water</td>
+            </tr>
+            <tr>
+                <td>H2O/OH-</td>
+                <td>Alkalised water</td>
+                <td>MnO4-/H+</td>
+                <td>Permanganate</td>
+            </tr>
+            <tr>
+                <td>Cr2O7-/H+</td>
+                <td>Dichromate</td>
+                <td>LiAlH4</td>
+                <td>Lithium aluminium hydride</td>
+            </tr>
+            <tr>
+                <td>NaBH4</td>
+                <td>Sodium borohydride</td>
+                <td>conc HCl</td>
+                <td>Concentrated hydrochloric acid</td>
+            </tr>
+            <tr>
+                <td>conc H2SO4</td>
+                <td>Concentrated sulfuric acid</td>
+                <td>PCl3</td>
+                <td>Phosphorus(III) chloride</td>
+            </tr>
+            <tr>
+                <td>PCl5</td>
+                <td>Phosphorus(V) chloride</td>
+                <td>SOCl2</td>
+                <td>Thionyl chloride</td>
+            </tr>
+            <tr>
+                <td>anhyd ZnCl2</td>
+                <td>Anhydrous zinc chloride</td>
+                <td>Tollens</td>
+                <td>Tollens' reagent (silver complex ion)</td>
+            </tr>
+            <tr>
+                <td>Fehlings</td>
+                <td>Fehling's solution (CuH2O4S)</td>
+                <td>Benedicts</td>
+                <td>Benedict's reagent</td>
+            </tr>
+            <tr>
+                <td>Ni</td>
+                <td>Nickel</td>
+                <td>Pt</td>
+                <td>Platinum</td>
+            </tr>
+            <tr>
+                <td>X-COOH</td>
+                <td>Carboxylic acid</td>
+                <td>X-COCl</td>
+                <td>Acyl chloride</td>
+            </tr>
+            <tr>
+                <td>X-NH2</td>
+                <td>Amine</td>
+                <td>X-OH</td>
+                <td>Alcohol</td>
+            </tr>
+            <tr>
+                <td>UV Light</td>
+                <td>Ultraviolet light</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
