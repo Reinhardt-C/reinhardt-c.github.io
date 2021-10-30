@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To UNIX Converter</title>
+  </head>
+  <body>
+    <input id="input" placeholder="Put date and time here." onkeydown="document.getElementById('unixtime').innerText=isNaN(Date.parse(document.getElementById('input').value))?'Incomplete date':Date.parse(document.getElementById('input').value)"></input>
+    <span id="unixtime"></span>
+  </body>
+</html>
