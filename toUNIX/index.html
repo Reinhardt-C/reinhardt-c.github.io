@@ -7,7 +7,10 @@
     <input id="input" placeholder="Put date and time here."></input>
     <span id="unixtime"></span>
     <script>
-      setInterval(() => document.getElementById('unixtime').innerText=isNaN(Date.parse(document.getElementById('input').value))?'Incomplete date':Math.round(Date.parse(document.getElementById('input').value)/1000), 50);
+      setInterval(() => {
+        const time = isNaN(Date.parse(document.getElementById('input').value))?'Incomplete date':Math.round(Date.parse(document.getElementById('input').value)/1000);
+        if (document.getElementById('unixtime')!=time)document.getElementById('unixtime').innerText=time;
+      }, 50);
     </script>
   </body>
 </html>
